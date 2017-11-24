@@ -29,12 +29,13 @@
  		<!-- sqlSessionFactory即通过该类来创建session工厂 -->
  		<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
  			<property name="dataSource" ref="dataSource" />
- 			<property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" />
+ 			<!-- <property name="configLocation" value="classpath:mybatis/SqlMapConfig.xml" /> -->
+ 			<property name="mapperLocations" value="classpath:cn/itcast/ssm/mapper/*.xml"></property>
+ 			<property name="typeAliasesPackage" value="classpath:cn.itcast.ssm.po"></property>
  		</bean>
  		
  		<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
  			<property name="basePackage" value="cn.itcast.ssm.mapper" />
- 			<property name="sqlSessionFactoryBeanName" ref="sqlSessionFactory" />
  		</bean>
  		
 </beans>

@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 
 <configuration>
 	<mappers>
-		<mapper resource="conf/UserMapper.xml"/>
+		<!-- <mapper resource="conf/UserMapper.xml"/> -->
 		<!-- <package name="cn.itcast.ssm.mapper"/> -->
 	</mappers>
 </configuration>
